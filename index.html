@@ -6,17 +6,72 @@
     <title>Form exercise</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&display=swap");
     </style>
   </head>
   <body>
     <div id="lefter">
       <div id="boxFloat">
-        <div id="textFloat">Teto Baguettes</div>
+        <img class="logo" src="logo.png" />
+        <div id="textFloat">TETO</div>
+        <img class="logo" src="logo.png" />
       </div>
       <img id="bg" src="tetoBaguette.jpg" />
     </div>
-    <div id="righter">a</div>
+    <div id="righter">
+      <div class="warning">
+        Here at Teto Drillers we are proud to feed everyone's favorite idol!
+      </div>
+      <div class="warning">
+        Please fill in how many baguettes you wanna feed Teto today, and your
+        (fake) personal information so she can thank you later at her show:
+      </div>
+      <form id="formArea" action="https://httpbin.org/post" method="post">
+        <div id="formInternalArea">
+          <div class="formSide">
+            <div class="formItem">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" />
+            </div>
+            <div class="formItem">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="formItem">
+              <label for="message">Your message</label>
+              <input type="text" id="message" name="message" />
+            </div>
+          </div>
+          <div class="formSide">
+            <div class="formItem">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" />
+            </div>
+            <div class="formItem">
+              <label for="fanLevel">Teto fan level</label>
+              <input type="number" id="fanLevel" name="fanLevel" />
+            </div>
+            <div class="formItem">
+              <label for="baguettes">How many baguettes</label>
+              <input
+                type="number"
+                id="baguettes"
+                name="baguettes"
+                min="100000000"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <button id="feedButton" type="submit">Feed Teto!</button>
+      </form>
+      <div id="loginWarn">
+        Already a feeder?
+        <a href="https://www.youtube.com/watch?v=JR6fHYpi-Jw"
+          >Here's our thanks!</a
+        >
+      </div>
+    </div>
   </body>
   <script src="./script.js"></script>
 </html>

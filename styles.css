@@ -47,33 +47,38 @@ table {
 body{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100vh;
+	background-color: #fff6f8;
 }
 
+/* Left side */
 #lefter{
+	max-height: 100vh;
 	position: relative;
-	display: inline-block;
-	max-width: 100px;
-}
-
-#righter{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: start;
+	/* Relative is needed to limit the size of the boxFloat */
 }
 
 #boxFloat{
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 	bottom: 150px;
-	width: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+}
+
+.logo{
+	height: 40px;
 }
 
 #textFloat{
-	font-family: "Poppins",'Times New Roman', Times, serif;
+	font-family: 'Cherry Bomb One','Times New Roman', Times, serif;
 	font-size: 40px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 18px;
 	color: aliceblue;
 }
 
@@ -81,4 +86,89 @@ body{
 	display: block;
 	max-height: 100vh;
 	width: auto;
+}
+
+/* Right side */
+#righter{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: start;
+	gap: 20px;
+	width: 100vw;
+}
+
+#righter,
+#feedButton,
+.formItem input{
+	font-family: 'Chewy','Times New Roman', Times, serif;
+}
+
+.warning{
+	max-width: 550px;
+}
+
+#formArea{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#formInternalArea{
+	display: flex;
+	gap: 80px;
+	background-color: #ffd5e3;
+	padding: 20px 35px;
+	box-shadow: 0px 3px 6px #6a6a6a;
+}
+
+.formSide{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.formItem{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.formItem label,
+.formItem input{
+	font-size: 24px;
+}
+
+.formItem input{
+	color: #d8365e;
+	border: 2px solid;
+	border-radius: 8px;
+}
+
+#feedButton{
+	max-width: 180px;
+	padding: 7px;
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: #d8365e;
+}
+
+.warning,
+#feedButton,
+#loginWarn{
+	font-size: 28px;
+	margin-left: 35px;
+}
+
+#loginWarn a{
+	color: #d8365e;
+}
+
+/* Animations */
+#feedButton:hover{
+	box-shadow: 1px 1px 5px #d8365e;
+}
+
+input:invalid{
+	border-color: #00f2ff;
 }

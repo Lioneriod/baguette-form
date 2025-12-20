@@ -50,3 +50,35 @@ body{
   justify-content: space-between;
   height: 100vh;
 }
+
+#lefter{
+	position: relative;
+	display: inline-block;
+	max-width: 100px;
+}
+
+#righter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: start;
+}
+
+#boxFloat{
+	position: absolute;
+	bottom: 150px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#textFloat{
+	font-family: "Poppins",'Times New Roman', Times, serif;
+	font-size: 40px;
+	color: aliceblue;
+}
+
+#bg{
+	display: block;
+	max-height: 100vh;
+	width: auto;
+}
